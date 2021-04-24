@@ -1,0 +1,8 @@
+Useful notes and links
+
+https://firebase.flutter.dev/
+
+
+youtube tutorial video:
+
+https://www.youtube.com/watch?v=z05m8nlPRxk&list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwC&index=3
