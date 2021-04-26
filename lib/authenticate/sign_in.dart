@@ -16,12 +16,12 @@ class _SignInState extends State<SignIn> {
   final AuthService _auth = AuthService();
   final _formkey = GlobalKey<FormState>();
 
-  bool loading = false;
-
   // text field state
   String email ='';
   String password = '';
   String error = '';
+
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
