@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_app/models/brew.dart';
 
 class DatabaseService {
 
@@ -15,6 +16,15 @@ class DatabaseService {
       'strength': strength
     });
   }
+
+  // brew list form snapshot
+  List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot){
+    return snapshot.docs.map((e) {
+
+    });
+
+  }
+
 
   // get brews streams
   Stream<QuerySnapshot> get brews {
