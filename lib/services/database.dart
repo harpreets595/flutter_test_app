@@ -19,16 +19,21 @@ class DatabaseService {
 
   // brew list form snapshot
   List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot){
-    return snapshot.docs.map((e) {
-
-    });
+    return snapshot.docs.map((doc) {
+      return Brew(
+        name: doc.data()['name'] ?? '',
+        strength: doc.data()['strength'] ?? 0,
+        sugars: doc.data()['sugars'] ?? 0
+      );
+    }).toList();
 
   }
 
 
   // get brews streams
-  Stream<QuerySnapshot> get brews {
-    return brewCollection.snapshots();
+  Stream<List<Brew>> get brews {
+    return brewCollection.snapshots()
+        .map(_brewListFromSnapshot);
   }
 
 
